@@ -1,3 +1,11 @@
+--[[
+    https://github.com/overextended/ox_lib
+
+    This file is licensed under LGPL-3.0 or higher <https://www.gnu.org/licenses/lgpl-3.0.en.html>
+
+    Copyright © 2025 Linden <https://github.com/thelindat>
+]]
+
 local input
 
 ---@class InputDialogRowProps
@@ -18,8 +26,10 @@ local input
 ---@field required? boolean
 ---@field format? string
 ---@field returnString? boolean
----@field clearable? string
+---@field clearable? boolean
+---@field searchable? boolean
 ---@field description? string
+---@field maxSelectedValues? number
 
 ---@class InputDialogOptionsProps
 ---@field allowCancel? boolean
