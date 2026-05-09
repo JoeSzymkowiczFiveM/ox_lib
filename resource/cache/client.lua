@@ -25,6 +25,8 @@ local GetVehicleMaxNumberOfPassengers = GetVehicleMaxNumberOfPassengers
 local GetMount = GetMount
 local IsPedOnMount = IsPedOnMount
 local GetCurrentPedWeapon = GetCurrentPedWeapon
+local GetEntityHealth = GetEntityHealth
+local GetPedArmour = GetPedArmour
 
 CreateThread(function()
 	while true do
@@ -33,6 +35,9 @@ CreateThread(function()
 		-- If the player's ped is changed, the ped value may return 0 during the transition. If the value is 0, skip all checks.
 		if ped ~= 0 then
 			cache:set('ped', ped)
+
+			cache:set('health', GetEntityHealth(ped))
+			cache:set('armour', GetPedArmour(ped))
 
 			local vehicle = GetVehiclePedIsIn(ped, false)
 
