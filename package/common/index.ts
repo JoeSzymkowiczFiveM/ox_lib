@@ -1,13 +1,8 @@
-export * from '../common';
-export * from './addKeybind';
 export * from './cache';
-export * from './callback';
-export * from './dui';
-export * from './interface';
-export * from './points';
-export * from './streaming';
-export * from './vehicleProperties';
-export * as lib from '.';
+export * from './getNearbyVehicles';
+export * from './locale';
+export * from './version';
+export * from './zones';
 
 export const context = IsDuplicityVersion() ? 'server' : 'client';
 
