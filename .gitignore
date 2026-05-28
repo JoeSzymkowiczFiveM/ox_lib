@@ -1,5 +1,6 @@
 .idea
 .luarc.jsonc
+.luarc.json
 created_zones.lua
 
 node_modules
